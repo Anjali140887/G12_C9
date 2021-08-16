@@ -10,11 +10,9 @@ images["bird"] = pygame.image.load("bird.png").convert_alpha()
 images["pipe"] = pygame.image.load("pipe.png").convert_alpha()
 images["invertedpipe"]=pygame.transform.flip(images["pipe"], False, True)
 bird=pygame.Rect(100,250,30,30)
-groundx=0
 while True:
     screen.blit(images["bg1"],[0,0])
-    groundx-=5
-    screen.blit(images["base"],[groundx,550])
+    screen.blit(images["base"],[0,550])
     screen.blit(images["bird"],bird)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
